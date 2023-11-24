@@ -18,3 +18,14 @@ this.
 
 What is the time complexity of your implementation (worst-case $\Theta$)? Add
 your answer, including your reasoning, to this markdown file.
+
+
+### Answer
+
+The code's worst-case time complexity is $\Theta(4*n)$, where n is the length of the array. 
+
+1. The function 'nmPTP' has a constant loop that iterates four times, so its complexity is constant. 
+
+2. The 'getCounts' function loops over each element in the array and increments a counter if it matches a target key. Its complexity is $\Theta(n)$ as it depends on the array's length. 
+
+Combining both functions, the overall worst-case time complexity is $\Theta(4*n)$.
