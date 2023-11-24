@@ -1,18 +1,24 @@
 function getCounts(arr, key) {
-    if(key=== null) return 0;
-    let m = 0;
-    for( var i = 0; i < arr.length; i++) {
-        if(arr[i] == key) {
-            m++;
+    return new Promise((resolve)=> {
+        if(key=== null) {
+            resolve(0);
+        } else {
+            let m = 0;
+            for( var i = 0; i < arr.length; i++) {
+                if(arr[i] == key) {
+                    m++;
+                }
+            }
+            resolve(m);
         }
-    }
-    return m;
+    })
+    
 }
 
 const async = require('async');
 function nmPTP(arr, key, done) {
-    const size = Math.ceil(arr.length/4);
-    var results = 0;
+    var results = 0, len = arr.length;
+    const size = Math.ceil(len/4);
 
     (async () => {
         for(let i = 0; i < 4; i++) {
@@ -24,4 +30,3 @@ function nmPTP(arr, key, done) {
 }
 
 module.exports = nmPTP;
-
