@@ -10,6 +10,6 @@
   },
   // for npm test run test code
   "scripts": {
-    "test": "mocha test.js"
+    "test": "node code.test.js"
   }
 }
