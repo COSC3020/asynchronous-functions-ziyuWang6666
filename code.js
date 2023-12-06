@@ -1,3 +1,4 @@
+const async = require('async');
 function getCounts(arr, key) {
     return new Promise((resolve)=> {
         if(key=== null) {
@@ -15,7 +16,6 @@ function getCounts(arr, key) {
     
 }
 
-const async = require('async');
 function nmPTP(arr, key, done) {
     var results = 0, len = arr.length;
     const size = Math.ceil(len/4);
@@ -29,4 +29,3 @@ function nmPTP(arr, key, done) {
     })();
 }
 
-module.exports = nmPTP;
