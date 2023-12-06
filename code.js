@@ -29,4 +29,4 @@ function nmPTP(arr, key, done) {
     })();
 }
 
-//module.exports = nmPTP;
+module.exports = nmPTP;
