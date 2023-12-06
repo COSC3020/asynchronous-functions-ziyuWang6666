@@ -1,5 +1,7 @@
+
+const fs = require('fs');
 const assert = require('assert');
-const nmPTP = require('./nmPTP');
+eval(fs.readFileSync('code.js')+'');
 
 async function runTests() {
     // normal case
